@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import { useEffect } from 'react';
+import { useEffect, useState} from 'react';
 import logo from '../assets/logo.png';
+import { CheckCircle } from "lucide-react";
+
 
 
 
@@ -15,26 +17,24 @@ const Main = () => {
         };
     }, []);
 
+    const [expanded, setExpanded] = useState(false);
+
     return (
         <>
             <Helmet>
                 <title>Infinity – Meet Authentically</title>
+                <meta name="keywords" content="dating app, Infinity, verified profiles, post-date reviews, safe dates, dating app, dating application, app of dating, da ting, open app, dating app for indians, app flirt, a dating app, dating app for virgins, the dating app, you dating app, with dating app" />
+                
                 <meta name="description" content="Leave catfishing behind. Infinity helps you date with honesty and safety." />
                 <meta property="og:title" content="Infinity – Meet Authentically" />
+
                 <meta property="og:image" content="/Infinity1.png" />
             </Helmet>
             <div className="container d-flex justify-content-center align-items-center vh-100">
                 <div className="text-center" style={{ color: '#ffffff' }}>
-                    <img
-                        src={logo}
-                        alt="Logo"
-                        className="img-fluid"
-                        style={{
+                    
 
-                            maxWidth: '300px', // sets a maximum width for responsiveness
-                            marginBottom: '-8px', // very little space before text
-                        }}
-                    />
+
                     <div
                         className="footer w-100 text-center"
                         style={{
@@ -53,7 +53,9 @@ const Main = () => {
                     </div>
 
                 </div>
+                
             </div>
+
 
         </>
 
